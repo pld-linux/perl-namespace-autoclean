@@ -1,6 +1,5 @@
 #
 # Conditional build:
-%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
@@ -13,15 +12,17 @@ Version:	0.28
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/E/ET/ETHER/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/namespace/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9746a73c34f294d663c583f857b8648f
 URL:		http://search.cpan.org/dist/namespace-autoclean/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with autodeps} || %{with tests}
-BuildRequires:	perl-B-Hooks-EndOfScope >= 0.07
-BuildRequires:	perl-Class-MOP >= 0.80
-BuildRequires:	perl-namespace-clean >= 0.11
+%if %{with tests}
+BuildRequires:	perl-B-Hooks-EndOfScope >= 0.12
+BuildRequires:	perl-Sub-Identify
+BuildRequires:	perl-Test-Requires
+BuildRequires:	perl-Test-Simple >= 0.88
+BuildRequires:	perl-namespace-clean >= 0.20
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
