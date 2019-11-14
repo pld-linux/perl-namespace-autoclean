@@ -8,12 +8,12 @@
 Summary:	namespace::autoclean removes all imported symbols at the end of compile cycle
 Summary(pl.UTF-8):	namespace::autoclean usuwa wszystkie zaimportowane symbole pod koniec cyklu kompilacji
 Name:		perl-namespace-autoclean
-Version:	0.28
+Version:	0.29
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/namespace/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9746a73c34f294d663c583f857b8648f
+# Source0-md5:	39b38c776cd1f0ee03cc70781a2f2798
 URL:		http://search.cpan.org/dist/namespace-autoclean/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
