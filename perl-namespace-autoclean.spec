@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	namespace
 %define	pnam	autoclean
 Summary:	namespace::autoclean removes all imported symbols at the end of compile cycle
