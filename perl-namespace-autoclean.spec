@@ -13,9 +13,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/namespace/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	39b38c776cd1f0ee03cc70781a2f2798
-URL:		http://search.cpan.org/dist/namespace-autoclean/
+URL:		https://metacpan.org/release/namespace-autoclean
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 %if %{with tests}
 BuildRequires:	perl-B-Hooks-EndOfScope >= 0.12
 BuildRequires:	perl-Sub-Identify
