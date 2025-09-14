@@ -1,19 +1,19 @@
 #
 # Conditional build:
-%bcond_without	tests		# do not perform "make test"
+%bcond_without	tests	# unit tests
 #
 %define	pdir	namespace
 %define	pnam	autoclean
 Summary:	namespace::autoclean removes all imported symbols at the end of compile cycle
 Summary(pl.UTF-8):	namespace::autoclean usuwa wszystkie zaimportowane symbole pod koniec cyklu kompilacji
 Name:		perl-namespace-autoclean
-Version:	0.29
-Release:	2
+Version:	0.31
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/namespace/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	39b38c776cd1f0ee03cc70781a2f2798
-URL:		https://metacpan.org/release/namespace-autoclean
+Source0:	https://www.cpan.org/modules/by-module/namespace/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	abd25263af155ab70bf7a039247400d3
+URL:		https://metacpan.org/dist/namespace-autoclean
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
@@ -68,5 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/namespace/*.pm
-%{_mandir}/man3/*
+%{perl_vendorlib}/namespace/autoclean.pm
+%{_mandir}/man3/namespace::autoclean.3pm*
